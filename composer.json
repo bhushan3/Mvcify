@@ -1,0 +1,15 @@
+{
+    "name": "bhushan3/mvcify",
+    "description": "An extremely simple MVC framework from scratch in PHP",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Mvcify\\" : "app/"
+        }
+    }
+}

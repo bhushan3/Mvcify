@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="Mvcify Coding Standards">
+
+	<!-- Description for this ruleset. -->
+	<description>Mvcify rules for PHP CodeSniffer.</description>
+
+	<!-- Pass some flags to PHPCS:
+		 p flag: Show progress of the run.
+		 s flag: Show sniff codes in all reports.
+		 v flag: Print verbose output.
+		 n flag: Do not print warnings.
+	-->
+	<!-- <arg value="psvn"/> -->
+
+	<!-- Exclude some directories. -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+
+    <!-- Run against the PSR2 ruleset -->
+	<rule ref="PSR2">
+		<exclude name="Generic.Files.LineLength.TooLong"/>
+		<exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+	</rule>
+
+    <!-- Run against the PHPCompatibility ruleset -->
+	<rule ref="PHPCompatibility"/>
+
+     <!-- Check for cross-version support for PHP 5.6 and higher. -->
+	<config name="testVersion" value="7.3-"/>
+
+</ruleset>
